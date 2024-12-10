@@ -10,7 +10,7 @@
                 <h2 class="mb-3 author d-flex align-items-center flex-wrap">
                     <div class="avatar"><img src="{{ $author->getImageUrl() }}" alt="..." class="img-fluid rounded-circle"></div>
                     <div class="title">
-                        <span>Posts by author "{{ $author->name }}"</span>
+                        <span>Posts by author "{{ $author->name }} {{ $author->last_name }}"</span>
                     </div>
                 </h2>
                 <div class="row">
@@ -31,7 +31,7 @@
                             <footer class="post-footer d-flex align-items-center">
                                 <a href="{{ route('author', ['author' => $post->author]) }}" class="author d-flex align-items-center flex-wrap">
                                     <div class="avatar"><img src="{{ $post->author->getImageUrl() }}" alt="..." class="img-fluid"></div>
-                                    <div class="title"><span>{{ $post->author->name }}</span></div>
+                                    <div class="title"><span>{{ $post->author->name }} {{ $post->author->last_name }}</span></div>
                                 </a>
                                 <div class="date"><i class="icon-clock"></i> {{ $post->created_at->diffForHumans() }}</div>
                                 <div class="comments meta-last"><i class="icon-comment"></i>{{ $post->comments->count() }}</div>

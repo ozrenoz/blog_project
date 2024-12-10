@@ -23,7 +23,7 @@
                 <h1>{{$post->heading}}<a href="#"><i class="fa fa-bookmark-o"></i></a></h1>
                 <div class="post-footer d-flex align-items-center flex-column flex-sm-row"><a href="{{$author->url()}}" class="author d-flex align-items-center flex-wrap">
                     <div class="avatar"><img src="{{$author->getImageUrl()}}" alt="..." class="img-fluid"></div>
-                    <div class="title"><span>{{$author->name}}</span></div></a>
+                    <div class="title"><span>{{$author->name}} {{$author->last_name}}</span></div></a>
                   <div class="d-flex align-items-center flex-wrap">       
                     <div class="date"><i class="icon-clock"></i> {{ $post->created_at->diffForHumans() }}</div>
                     <div class="views"><i class="icon-eye"></i> {{$post->views}}</div>
